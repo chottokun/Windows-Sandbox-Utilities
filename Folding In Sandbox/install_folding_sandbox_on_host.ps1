@@ -3,7 +3,8 @@
 #For a custom username, add -username <your username> to the command execution
 param(
   [string]$username = 'wsandbox_anon',
-  [string]$team     = '251561'
+  [string]$team     = '251561',
+  [string]$passkey  = ''
 )
 $ProgressPreference = 'SilentlyContinue' #Progress bar makes things way slower
 
@@ -66,6 +67,7 @@ Write-Output "Saved Folding@Home configuration file to $working_dir\$conf_file"
 New-Item -Force -Path "$working_dir\$conf_file" -ItemType File
 Set-Content -Path "$working_dir\$conf_file" -Value @"
 <config>
+  <passkey v='$passkey'/>
   <user v='$username'/>
   <team v='$team'/>
   <core-priority v='low'/>

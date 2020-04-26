@@ -53,7 +53,7 @@ To run the script, open command prompt or powershell as an administrator and ent
 
 If you want to pass in your username you can add the -username option:
 
-```Powershell.exe -ExecutionPolicy Bypass -File .\install_folding_sandbox_on_host.ps1 -username <your username>```
+```Powershell.exe -ExecutionPolicy Bypass -File .\install_folding_sandbox_on_host.ps1 -username <your username> -team <your team> -passkey <your pass key>```
 
 And you're off! Feel free to submit work items or pull requests to this repository if you have any problems, ideas, or suggestions!
 
